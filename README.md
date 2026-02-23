@@ -13,14 +13,6 @@ Commute is a B2B corporate carpooling platform that enables employees from the s
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-- [Development with Claude Code](#development-with-claude-code)
-- [Angular MCP Server Setup](#angular-mcp-server-setup)
-- [Recommended MCP Servers](#recommended-mcp-servers)
-- [Architecture Decisions](#architecture-decisions)
-- [API Contract & Mock Layer](#api-contract--mock-layer)
-- [PWA Configuration](#pwa-configuration)
-- [Coding Conventions](#coding-conventions)
-- [Useful Commands](#useful-commands)
 
 ---
 
