@@ -1,3 +1,5 @@
+import { APP } from '../config/app.constants';
+
 export const fr: Record<string, string> = {
   // Nav
   'nav.problem': 'Probl\u00e8me',
@@ -40,7 +42,7 @@ export const fr: Record<string, string> = {
 
   // Solution
   'solution.label': 'La solution',
-  'solution.heading': 'Commute r\u00e9sout les cinq probl\u00e8mes',
+  'solution.heading': `${APP.name} r\u00e9sout les cinq probl\u00e8mes`,
   'solution.subtitle':
     'Une seule plateforme qui r\u00e9duit les co\u00fbts, diminue les \u00e9missions et rapproche votre \u00e9quipe.',
 
@@ -84,7 +86,7 @@ export const fr: Record<string, string> = {
   'trust.heading': 'Pr\u00eat pour l\u2019entreprise d\u00e8s le premier jour',
   'trust.0.title': 'Zones d\u2019habitation priv\u00e9es',
   'trust.0.description':
-    'Les employ\u00e9s ne partagent jamais leur adresse exacte. Commute utilise des \u00ab\u00a0zones d\u2019habitation\u00a0\u00bb approximatives pour jumeler les trajets tout en prot\u00e9geant la vie priv\u00e9e.',
+    `Les employ\u00e9s ne partagent jamais leur adresse exacte. ${APP.name} utilise des \u00ab\u00a0zones d\u2019habitation\u00a0\u00bb approximatives pour jumeler les trajets tout en prot\u00e9geant la vie priv\u00e9e.`,
   'trust.1.title': 'Authentification SSO / OIDC',
   'trust.1.description':
     'S\u2019int\u00e8gre avec Microsoft Entra ID et d\u2019autres fournisseurs d\u2019identit\u00e9 d\u2019entreprise. Aucun nouveau mot de passe \u00e0 g\u00e9rer.',
@@ -100,7 +102,7 @@ export const fr: Record<string, string> = {
   'footer.privacy': 'Confidentialit\u00e9',
   'footer.terms': 'Conditions',
   'footer.contact': 'Contact',
-  'footer.copy': '\u00a9 2026 Commute. Tous droits r\u00e9serv\u00e9s.',
+  'footer.copy': `\u00a9 ${APP.copyrightYear} ${APP.name}. Tous droits r\u00e9serv\u00e9s.`,
 
   // Snackbar
   'snackbar.success': 'Merci\u00a0! Nous vous contacterons bient\u00f4t.',
@@ -110,15 +112,15 @@ export const fr: Record<string, string> = {
 
   // Privacy page
   'privacy.title': 'Politique de confidentialit\u00e9',
-  'privacy.lastUpdated': 'Derni\u00e8re mise \u00e0 jour\u00a0: f\u00e9vrier 2026',
+  'privacy.lastUpdated': `Derni\u00e8re mise \u00e0 jour\u00a0: ${APP.lastUpdatedFr}`,
   'privacy.intro':
-    'Commute (\u00ab\u00a0nous\u00a0\u00bb) s\u2019engage \u00e0 prot\u00e9ger la vie priv\u00e9e de ses utilisateurs. Cette politique de confidentialit\u00e9 explique comment nous collectons, utilisons et prot\u00e9geons vos informations lorsque vous utilisez notre plateforme de covoiturage d\u2019entreprise.',
+    `${APP.name} (\u00ab\u00a0nous\u00a0\u00bb) s\u2019engage \u00e0 prot\u00e9ger la vie priv\u00e9e de ses utilisateurs. Cette politique de confidentialit\u00e9 explique comment nous collectons, utilisons et prot\u00e9geons vos informations lorsque vous utilisez notre plateforme de covoiturage d\u2019entreprise.`,
   'privacy.collection.heading': 'Informations que nous collectons',
   'privacy.collection.text':
     'Nous collectons les informations fournies par votre employeur lors de l\u2019int\u00e9gration, celles que vous fournissez lors de la cr\u00e9ation de votre profil (nom, courriel professionnel, pr\u00e9f\u00e9rences de trajet, zone d\u2019habitation) et les donn\u00e9es d\u2019utilisation g\u00e9n\u00e9r\u00e9es par la plateforme (historique des trajets, donn\u00e9es de jumelage, statut de confirmation).',
   'privacy.homeZone.heading': 'Confidentialit\u00e9 de la zone d\u2019habitation',
   'privacy.homeZone.text':
-    'Commute utilise des \u00ab\u00a0zones d\u2019habitation\u00a0\u00bb approximatives plut\u00f4t que des adresses exactes. Votre localisation pr\u00e9cise n\u2019est jamais stock\u00e9e, partag\u00e9e avec d\u2019autres utilisateurs ou visible par votre employeur. Les zones d\u2019habitation repr\u00e9sentent des zones g\u00e9n\u00e9rales utilis\u00e9es uniquement par les algorithmes de jumelage.',
+    `${APP.name} utilise des \u00ab\u00a0zones d\u2019habitation\u00a0\u00bb approximatives plut\u00f4t que des adresses exactes. Votre localisation pr\u00e9cise n\u2019est jamais stock\u00e9e, partag\u00e9e avec d\u2019autres utilisateurs ou visible par votre employeur. Les zones d\u2019habitation repr\u00e9sentent des zones g\u00e9n\u00e9rales utilis\u00e9es uniquement par les algorithmes de jumelage.`,
   'privacy.usage.heading': 'Comment nous utilisons vos informations',
   'privacy.usage.text':
     'Nous utilisons vos informations pour vous jumeler avec des coll\u00e8gues sur des trajets similaires, fournir la coordination des trajets et les notifications, g\u00e9n\u00e9rer des analyses anonymis\u00e9es pour les rapports de d\u00e9veloppement durable de votre employeur (ESG Scope 3, Cat\u00e9gorie 7) et am\u00e9liorer nos algorithmes de jumelage.',
@@ -133,52 +135,52 @@ export const fr: Record<string, string> = {
     'Vous avez le droit d\u2019acc\u00e9der, de corriger ou de demander la suppression de vos donn\u00e9es personnelles. Vous pouvez mettre \u00e0 jour votre profil et vos pr\u00e9f\u00e9rences \u00e0 tout moment via l\u2019application. Pour demander la suppression compl\u00e8te de vos donn\u00e9es, contactez l\u2019administrateur de votre entreprise ou contactez-nous directement.',
   'privacy.contact.heading': 'Nous contacter',
   'privacy.contact.text':
-    'Si vous avez des questions concernant cette politique de confidentialit\u00e9, veuillez nous contacter \u00e0 privacy@commute-app.com.',
+    `Si vous avez des questions concernant cette politique de confidentialit\u00e9, veuillez nous contacter \u00e0 ${APP.emails.privacy}.`,
 
   // Terms page
   'terms.title': 'Conditions d\u2019utilisation',
-  'terms.lastUpdated': 'Derni\u00e8re mise \u00e0 jour\u00a0: f\u00e9vrier 2026',
+  'terms.lastUpdated': `Derni\u00e8re mise \u00e0 jour\u00a0: ${APP.lastUpdatedFr}`,
   'terms.intro':
-    'Les pr\u00e9sentes conditions d\u2019utilisation (\u00ab\u00a0Conditions\u00a0\u00bb) r\u00e9gissent votre utilisation de la plateforme de covoiturage d\u2019entreprise Commute. En acc\u00e9dant ou en utilisant Commute, vous acceptez d\u2019\u00eatre li\u00e9 par ces Conditions.',
+    `Les pr\u00e9sentes conditions d\u2019utilisation (\u00ab\u00a0Conditions\u00a0\u00bb) r\u00e9gissent votre utilisation de la plateforme de covoiturage d\u2019entreprise ${APP.name}. En acc\u00e9dant ou en utilisant ${APP.name}, vous acceptez d\u2019\u00eatre li\u00e9 par ces Conditions.`,
   'terms.service.heading': 'Description du service',
   'terms.service.text':
-    'Commute est une plateforme de covoiturage d\u2019entreprise B2B qui facilite le partage de trajets entre employ\u00e9s d\u2019organisations abonn\u00e9es. Commute est un service de jumelage et de coordination \u2014 nous ne fournissons pas de transport nous-m\u00eames.',
+    `${APP.name} est une plateforme de covoiturage d\u2019entreprise B2B qui facilite le partage de trajets entre employ\u00e9s d\u2019organisations abonn\u00e9es. ${APP.name} est un service de jumelage et de coordination \u2014 nous ne fournissons pas de transport nous-m\u00eames.`,
   'terms.eligibility.heading': '\u00c9ligibilit\u00e9',
   'terms.eligibility.text':
-    'Commute est disponible pour les employ\u00e9s d\u2019organisations ayant un abonnement actif. Vous devez \u00eatre autoris\u00e9 par votre employeur \u00e0 utiliser la plateforme. Les conducteurs doivent d\u00e9tenir un permis de conduire valide et une assurance v\u00e9hicule ad\u00e9quate conform\u00e9ment aux lois locales.',
+    `${APP.name} est disponible pour les employ\u00e9s d\u2019organisations ayant un abonnement actif. Vous devez \u00eatre autoris\u00e9 par votre employeur \u00e0 utiliser la plateforme. Les conducteurs doivent d\u00e9tenir un permis de conduire valide et une assurance v\u00e9hicule ad\u00e9quate conform\u00e9ment aux lois locales.`,
   'terms.responsibilities.heading': 'Responsabilit\u00e9s de l\u2019utilisateur',
   'terms.responsibilities.text':
     'Vous vous engagez \u00e0 fournir des informations de profil exactes, \u00e0 confirmer ou annuler les trajets en temps opportun, \u00e0 traiter les covoitureurs avec respect et courtoisie, et \u00e0 respecter toutes les lois de la circulation applicables. Les absences ou annulations r\u00e9p\u00e9t\u00e9es peuvent entra\u00eener une priorit\u00e9 de jumelage r\u00e9duite.',
   'terms.liability.heading': 'Limitation de responsabilit\u00e9',
   'terms.liability.text':
-    'Commute facilite les jumelages de covoiturage mais n\u2019est pas responsable de la conduite des conducteurs ou passagers, de l\u2019\u00e9tat des v\u00e9hicules, des choix d\u2019itin\u00e9raire ou de tout incident survenant pendant les trajets. Les utilisateurs participent au covoiturage \u00e0 leurs propres risques.',
+    `${APP.name} facilite les jumelages de covoiturage mais n\u2019est pas responsable de la conduite des conducteurs ou passagers, de l\u2019\u00e9tat des v\u00e9hicules, des choix d\u2019itin\u00e9raire ou de tout incident survenant pendant les trajets. Les utilisateurs participent au covoiturage \u00e0 leurs propres risques.`,
   'terms.ip.heading': 'Propri\u00e9t\u00e9 intellectuelle',
   'terms.ip.text':
-    'La plateforme Commute, y compris son design, ses algorithmes et son contenu, est la propri\u00e9t\u00e9 intellectuelle de Commute et est prot\u00e9g\u00e9e par les lois applicables. Vous ne pouvez pas reproduire, distribuer ou cr\u00e9er des \u0153uvres d\u00e9riv\u00e9es sans notre consentement \u00e9crit.',
+    `La plateforme ${APP.name}, y compris son design, ses algorithmes et son contenu, est la propri\u00e9t\u00e9 intellectuelle de ${APP.name} et est prot\u00e9g\u00e9e par les lois applicables. Vous ne pouvez pas reproduire, distribuer ou cr\u00e9er des \u0153uvres d\u00e9riv\u00e9es sans notre consentement \u00e9crit.`,
   'terms.termination.heading': 'R\u00e9siliation',
   'terms.termination.text':
-    'Votre acc\u00e8s peut \u00eatre r\u00e9sili\u00e9 par votre employeur ou par Commute si vous enfreignez ces Conditions. \u00c0 la r\u00e9siliation, votre droit d\u2019utiliser la plateforme cesse imm\u00e9diatement.',
+    `Votre acc\u00e8s peut \u00eatre r\u00e9sili\u00e9 par votre employeur ou par ${APP.name} si vous enfreignez ces Conditions. \u00c0 la r\u00e9siliation, votre droit d\u2019utiliser la plateforme cesse imm\u00e9diatement.`,
   'terms.changes.heading': 'Modifications de ces conditions',
   'terms.changes.text':
     'Nous pouvons mettre \u00e0 jour ces Conditions de temps \u00e0 autre. Nous informerons les utilisateurs des changements importants via la plateforme. L\u2019utilisation continue apr\u00e8s les modifications constitue l\u2019acceptation des Conditions r\u00e9vis\u00e9es.',
   'terms.contact.heading': 'Contact',
-  'terms.contact.text': 'Pour toute question concernant ces Conditions, contactez-nous \u00e0 legal@commute-app.com.',
+  'terms.contact.text': `Pour toute question concernant ces Conditions, contactez-nous \u00e0 ${APP.emails.legal}.`,
 
   // Contact page
   'contact.title': 'Nous contacter',
   'contact.subtitle':
-    'Nous serions ravis de vous entendre. Que vous souhaitiez adopter Commute dans votre organisation ou que vous ayez des questions sur notre plateforme, contactez-nous via les canaux ci-dessous.',
+    `Nous serions ravis de vous entendre. Que vous souhaitiez adopter ${APP.name} dans votre organisation ou que vous ayez des questions sur notre plateforme, contactez-nous via les canaux ci-dessous.`,
   'contact.sales.heading': 'Ventes & D\u00e9mos',
-  'contact.sales.text': 'Int\u00e9ress\u00e9 par Commute pour votre entreprise\u00a0? Demandez une d\u00e9mo ou obtenez des informations tarifaires.',
-  'contact.sales.email': 'sales@commute-app.com',
+  'contact.sales.text': `Int\u00e9ress\u00e9 par ${APP.name} pour votre entreprise\u00a0? Demandez une d\u00e9mo ou obtenez des informations tarifaires.`,
+  'contact.sales.email': APP.emails.sales,
   'contact.support.heading': 'Support',
   'contact.support.text': 'Besoin d\u2019aide avec votre compte ou une question technique\u00a0?',
-  'contact.support.email': 'support@commute-app.com',
+  'contact.support.email': APP.emails.support,
   'contact.general.heading': 'Demandes g\u00e9n\u00e9rales',
   'contact.general.text': 'Pour la presse, les partenariats ou autres demandes.',
-  'contact.general.email': 'hello@commute-app.com',
+  'contact.general.email': APP.emails.general,
   'contact.office.heading': 'Bureau',
-  'contact.office.text': 'Montr\u00e9al, QC, Canada',
+  'contact.office.text': `${APP.office.cityFr}, ${APP.office.region}, ${APP.office.countryName}`,
 
   // Not Found page
   'notFound.message': 'La page que vous recherchez n\u2019existe pas.',

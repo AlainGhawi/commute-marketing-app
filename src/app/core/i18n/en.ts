@@ -1,3 +1,5 @@
+import { APP } from '../config/app.constants';
+
 export const en: Record<string, string> = {
   // Nav
   'nav.problem': 'Problem',
@@ -40,7 +42,7 @@ export const en: Record<string, string> = {
 
   // Solution
   'solution.label': 'The solution',
-  'solution.heading': 'Commute solves all five',
+  'solution.heading': `${APP.name} solves all five`,
   'solution.subtitle':
     'One platform that reduces costs, cuts emissions, and brings your team closer together.',
 
@@ -84,7 +86,7 @@ export const en: Record<string, string> = {
   'trust.heading': 'Enterprise-ready from day one',
   'trust.0.title': 'Privacy-safe home zones',
   'trust.0.description':
-    'Employees never share their exact address. Commute uses approximate "home zones" to match rides while protecting personal privacy.',
+    `Employees never share their exact address. ${APP.name} uses approximate "home zones" to match rides while protecting personal privacy.`,
   'trust.1.title': 'SSO / OIDC authentication',
   'trust.1.description':
     'Integrates with Microsoft Entra ID and other enterprise identity providers. No new passwords for your employees to manage.',
@@ -100,7 +102,7 @@ export const en: Record<string, string> = {
   'footer.privacy': 'Privacy',
   'footer.terms': 'Terms',
   'footer.contact': 'Contact',
-  'footer.copy': '\u00a9 2026 Commute. All rights reserved.',
+  'footer.copy': `\u00a9 ${APP.copyrightYear} ${APP.name}. All rights reserved.`,
 
   // Snackbar
   'snackbar.success': 'Thanks! We\'ll reach out soon.',
@@ -110,15 +112,15 @@ export const en: Record<string, string> = {
 
   // Privacy page
   'privacy.title': 'Privacy Policy',
-  'privacy.lastUpdated': 'Last updated: February 2026',
+  'privacy.lastUpdated': `Last updated: ${APP.lastUpdated}`,
   'privacy.intro':
-    'Commute ("we", "us", or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, and safeguard your information when you use our corporate carpooling platform.',
+    `${APP.name} ("we", "us", or "our") is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, and safeguard your information when you use our corporate carpooling platform.`,
   'privacy.collection.heading': 'Information We Collect',
   'privacy.collection.text':
     'We collect information that your employer provides during tenant onboarding, information you provide when creating your profile (name, work email, commute preferences, home zone), and usage data generated through the platform (ride history, match data, confirmation status).',
   'privacy.homeZone.heading': 'Home Zone Privacy',
   'privacy.homeZone.text':
-    'Commute uses approximate "home zones" rather than exact addresses. Your precise home location is never stored, shared with other users, or visible to your employer. Home zones represent general areas used solely for ride-matching algorithms.',
+    `${APP.name} uses approximate "home zones" rather than exact addresses. Your precise home location is never stored, shared with other users, or visible to your employer. Home zones represent general areas used solely for ride-matching algorithms.`,
   'privacy.usage.heading': 'How We Use Your Information',
   'privacy.usage.text':
     'We use your information to match you with colleagues on similar commute routes, to provide ride coordination and notifications, to generate anonymized analytics for your employer\'s sustainability reporting (ESG Scope 3, Category 7), and to improve our matching algorithms.',
@@ -133,52 +135,52 @@ export const en: Record<string, string> = {
     'You have the right to access, correct, or request deletion of your personal data. You can update your profile and preferences at any time through the app. To request full data deletion, contact your company administrator or reach out to us directly.',
   'privacy.contact.heading': 'Contact Us',
   'privacy.contact.text':
-    'If you have questions about this Privacy Policy, please contact us at privacy@commute-app.com.',
+    `If you have questions about this Privacy Policy, please contact us at ${APP.emails.privacy}.`,
 
   // Terms page
   'terms.title': 'Terms of Service',
-  'terms.lastUpdated': 'Last updated: February 2026',
+  'terms.lastUpdated': `Last updated: ${APP.lastUpdated}`,
   'terms.intro':
-    'These Terms of Service ("Terms") govern your use of the Commute corporate carpooling platform. By accessing or using Commute, you agree to be bound by these Terms.',
+    `These Terms of Service ("Terms") govern your use of the ${APP.name} corporate carpooling platform. By accessing or using ${APP.name}, you agree to be bound by these Terms.`,
   'terms.service.heading': 'Service Description',
   'terms.service.text':
-    'Commute is a B2B corporate carpooling platform that facilitates ride-sharing among employees of subscribing organizations. Commute is a matching and coordination service \u2014 we do not provide transportation ourselves.',
+    `${APP.name} is a B2B corporate carpooling platform that facilitates ride-sharing among employees of subscribing organizations. ${APP.name} is a matching and coordination service \u2014 we do not provide transportation ourselves.`,
   'terms.eligibility.heading': 'Eligibility',
   'terms.eligibility.text':
-    'Commute is available to employees of organizations that have an active subscription. You must be authorized by your employer to use the platform. Drivers must hold a valid driver\'s license and adequate vehicle insurance as required by local laws.',
+    `${APP.name} is available to employees of organizations that have an active subscription. You must be authorized by your employer to use the platform. Drivers must hold a valid driver's license and adequate vehicle insurance as required by local laws.`,
   'terms.responsibilities.heading': 'User Responsibilities',
   'terms.responsibilities.text':
     'You agree to provide accurate profile information, to confirm or cancel rides in a timely manner, to treat co-riders with respect and courtesy, and to comply with all applicable traffic laws when driving. Repeated no-shows or cancellations may result in reduced matching priority.',
   'terms.liability.heading': 'Limitation of Liability',
   'terms.liability.text':
-    'Commute facilitates carpooling matches but is not responsible for the conduct of drivers or riders, vehicle conditions, route choices, or any incidents that occur during commutes. Users participate in carpooling at their own risk.',
+    `${APP.name} facilitates carpooling matches but is not responsible for the conduct of drivers or riders, vehicle conditions, route choices, or any incidents that occur during commutes. Users participate in carpooling at their own risk.`,
   'terms.ip.heading': 'Intellectual Property',
   'terms.ip.text':
-    'The Commute platform, including its design, algorithms, and content, is the intellectual property of Commute and is protected by applicable laws. You may not reproduce, distribute, or create derivative works without our written consent.',
+    `The ${APP.name} platform, including its design, algorithms, and content, is the intellectual property of ${APP.name} and is protected by applicable laws. You may not reproduce, distribute, or create derivative works without our written consent.`,
   'terms.termination.heading': 'Termination',
   'terms.termination.text':
-    'Your access may be terminated by your employer or by Commute if you violate these Terms. Upon termination, your right to use the platform ceases immediately.',
+    `Your access may be terminated by your employer or by ${APP.name} if you violate these Terms. Upon termination, your right to use the platform ceases immediately.`,
   'terms.changes.heading': 'Changes to These Terms',
   'terms.changes.text':
     'We may update these Terms from time to time. We will notify users of material changes through the platform. Continued use after changes constitutes acceptance of the revised Terms.',
   'terms.contact.heading': 'Contact',
-  'terms.contact.text': 'For questions about these Terms, contact us at legal@commute-app.com.',
+  'terms.contact.text': `For questions about these Terms, contact us at ${APP.emails.legal}.`,
 
   // Contact page
   'contact.title': 'Contact Us',
   'contact.subtitle':
-    'We\'d love to hear from you. Whether you\'re interested in bringing Commute to your organization or have questions about our platform, reach out through any of the channels below.',
+    `We'd love to hear from you. Whether you're interested in bringing ${APP.name} to your organization or have questions about our platform, reach out through any of the channels below.`,
   'contact.sales.heading': 'Sales & Demos',
-  'contact.sales.text': 'Interested in Commute for your company? Request a demo or get pricing information.',
-  'contact.sales.email': 'sales@commute-app.com',
+  'contact.sales.text': `Interested in ${APP.name} for your company? Request a demo or get pricing information.`,
+  'contact.sales.email': APP.emails.sales,
   'contact.support.heading': 'Support',
   'contact.support.text': 'Need help with your account or have a technical question?',
-  'contact.support.email': 'support@commute-app.com',
+  'contact.support.email': APP.emails.support,
   'contact.general.heading': 'General Inquiries',
   'contact.general.text': 'For press, partnerships, or other inquiries.',
-  'contact.general.email': 'hello@commute-app.com',
+  'contact.general.email': APP.emails.general,
   'contact.office.heading': 'Office',
-  'contact.office.text': 'Montreal, QC, Canada',
+  'contact.office.text': `${APP.office.city}, ${APP.office.region}, ${APP.office.countryName}`,
 
   // Not Found page
   'notFound.message': 'The page you\'re looking for doesn\'t exist.',

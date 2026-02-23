@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { SeoMetadata } from './models/seo-metadata.model';
+import { APP } from './core/config/app.constants';
 
 export const routes: Routes = [
   {
@@ -8,9 +9,8 @@ export const routes: Routes = [
       import('./features/landing/landing-page').then(m => m.LandingPage),
     data: {
       seo: {
-        title: 'Commute | Corporate Carpooling Platform',
-        description:
-          'Commute is a B2B corporate carpooling platform that reduces parking costs, cuts Scope 3 emissions, and brings teams closer together.',
+        title: `${APP.name} | ${APP.tagline}`,
+        description: APP.seo.description,
         canonicalPath: '/',
       } satisfies SeoMetadata,
     },
@@ -20,9 +20,9 @@ export const routes: Routes = [
     loadChildren: () => import('./features/privacy/privacy.routes'),
     data: {
       seo: {
-        title: 'Privacy Policy | Commute',
+        title: `Privacy Policy | ${APP.name}`,
         description:
-          'Learn how Commute protects your data with privacy-safe home zones, multi-tenant isolation, and transparent data practices.',
+          `Learn how ${APP.name} protects your data with privacy-safe home zones, multi-tenant isolation, and transparent data practices.`,
         canonicalPath: '/privacy',
       } satisfies SeoMetadata,
     },
@@ -32,9 +32,9 @@ export const routes: Routes = [
     loadChildren: () => import('./features/terms/terms.routes'),
     data: {
       seo: {
-        title: 'Terms of Service | Commute',
+        title: `Terms of Service | ${APP.name}`,
         description:
-          'Read the Terms of Service for the Commute corporate carpooling platform.',
+          `Read the Terms of Service for the ${APP.name} corporate carpooling platform.`,
         canonicalPath: '/terms',
       } satisfies SeoMetadata,
     },
@@ -44,9 +44,9 @@ export const routes: Routes = [
     loadChildren: () => import('./features/contact/contact.routes'),
     data: {
       seo: {
-        title: 'Contact Us | Commute',
+        title: `Contact Us | ${APP.name}`,
         description:
-          'Get in touch with the Commute team for demos, support, partnerships, or general inquiries.',
+          `Get in touch with the ${APP.name} team for demos, support, partnerships, or general inquiries.`,
         canonicalPath: '/contact',
       } satisfies SeoMetadata,
     },
@@ -57,7 +57,7 @@ export const routes: Routes = [
       import('./features/not-found/not-found-page').then(m => m.NotFoundPage),
     data: {
       seo: {
-        title: 'Page Not Found | Commute',
+        title: `Page Not Found | ${APP.name}`,
         description: 'The page you are looking for does not exist.',
         canonicalPath: '/',
       } satisfies SeoMetadata,
