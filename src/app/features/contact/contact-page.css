@@ -1,0 +1,104 @@
+:host {
+  display: block;
+}
+
+.contact-page {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-16);
+}
+
+.contact-container {
+  max-width: 900px;
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.contact-container h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.contact-subtitle {
+  margin-top: var(--space-4);
+  font-size: 1.0625rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.contact-card {
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-surface-elevated);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  transition: box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.contact-card h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-3);
+}
+
+.contact-card p {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-4);
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color 0.15s ease;
+}
+
+.contact-email:hover {
+  color: var(--color-primary-dark);
+}
+
+.contact-office {
+  text-align: center;
+  margin-top: var(--space-12);
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-surface-alt);
+  border-radius: var(--radius-lg);
+}
+
+.contact-office h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.contact-office p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}

@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { LandingPage } from './landing-page';
 import { TranslationService } from '../../core/i18n/translation.service';
 
@@ -8,6 +9,7 @@ describe('LandingPage', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [LandingPage],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     i18n = TestBed.inject(TranslationService);
@@ -24,7 +26,7 @@ describe('LandingPage', () => {
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
     const headline = compiled.querySelector('.hero-headline');
-    expect(headline?.textContent).toContain('The corporate commute, reimagined.');
+    expect(headline?.textContent).toContain('The employee commute, reimagined.');
   });
 
   it('should have a "Request a demo" CTA button in the hero', async () => {
@@ -47,7 +49,7 @@ describe('LandingPage', () => {
 
     const compiled = fixture.nativeElement as HTMLElement;
     const headline = compiled.querySelector('.hero-headline');
-    expect(headline?.textContent).toContain('Le trajet professionnel, réinventé.');
+    expect(headline?.textContent).toContain('Le trajet des employés, réinventé.');
   });
 
   it('should show snackbar after email submission', async () => {

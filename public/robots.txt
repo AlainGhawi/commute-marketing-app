@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aghawi.github.io/commute-app/sitemap.xml

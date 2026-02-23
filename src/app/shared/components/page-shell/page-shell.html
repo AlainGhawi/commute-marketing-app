@@ -1,0 +1,36 @@
+<nav class="shell-nav" role="navigation" aria-label="Page navigation">
+  <div class="shell-nav-inner">
+    <a class="shell-nav-logo" routerLink="/" aria-label="Commute home">
+      <span class="material-symbols-outlined logo-icon">directions_car</span>
+      <span class="logo-text">Commute</span>
+    </a>
+    <div class="shell-nav-right">
+      <a class="shell-back-link" routerLink="/">
+        <span class="material-symbols-outlined">arrow_back</span>
+        <span class="shell-back-text">{{ 'pageShell.backToHome' | translate }}</span>
+      </a>
+      <button class="lang-toggle" (click)="i18n.toggleLocale()" aria-label="Switch language">
+        <span>{{ i18n.isEn() ? 'FR' : 'EN' }}</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="shell-content">
+  <ng-content />
+</main>
+
+<footer class="shell-footer">
+  <div class="shell-footer-inner">
+    <div class="shell-footer-brand">
+      <span class="material-symbols-outlined logo-icon">directions_car</span>
+      <span class="logo-text">Commute</span>
+    </div>
+    <div class="shell-footer-links">
+      <a routerLink="/privacy">{{ 'footer.privacy' | translate }}</a>
+      <a routerLink="/terms">{{ 'footer.terms' | translate }}</a>
+      <a routerLink="/contact">{{ 'footer.contact' | translate }}</a>
+    </div>
+    <p class="shell-footer-copy">{{ 'footer.copy' | translate }}</p>
+  </div>
+</footer>

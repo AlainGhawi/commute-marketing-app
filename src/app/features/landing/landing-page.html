@@ -10,23 +10,24 @@
       @for (link of navLinks; track link.fragment) {
         <a class="nav-link" (click)="scrollTo(link.fragment)">{{ link.key | translate }}</a>
       }
-      <button class="lang-toggle" (click)="i18n.toggleLocale()" aria-label="Switch language">
-        <span class="material-symbols-outlined">translate</span>
-        <span>{{ i18n.isEn() ? 'FR' : 'EN' }}</span>
-      </button>
       <a class="btn btn-primary btn-sm" (click)="scrollTo('cta')">{{ 'nav.requestDemo' | translate }}</a>
     </div>
 
-    <button
-      class="mobile-toggle"
-      (click)="toggleMobileMenu()"
-      [attr.aria-expanded]="mobileMenuOpen()"
-      aria-label="Toggle navigation menu"
-    >
-      <span class="material-symbols-outlined">
-        {{ mobileMenuOpen() ? 'close' : 'menu' }}
-      </span>
-    </button>
+    <div class="nav-right">
+      <button class="lang-toggle" (click)="i18n.toggleLocale()" aria-label="Switch language">
+        <span>{{ i18n.isEn() ? 'FR' : 'EN' }}</span>
+      </button>
+      <button
+        class="mobile-toggle"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="material-symbols-outlined">
+          {{ mobileMenuOpen() ? 'close' : 'menu' }}
+        </span>
+      </button>
+    </div>
   </div>
 </nav>
 
@@ -35,18 +36,9 @@
   <div class="hero-bg"></div>
   <div class="container hero-content">
     <h1 class="hero-headline">{{ 'hero.headline' | translate }}</h1>
-    <p class="hero-subhead">{{ 'hero.subhead' | translate }}</p>
     <div class="hero-actions">
       <a class="btn btn-primary btn-lg" (click)="scrollTo('cta')">{{ 'hero.ctaPrimary' | translate }}</a>
       <a class="btn btn-outline btn-lg" (click)="scrollTo('how-it-works')">{{ 'hero.ctaSecondary' | translate }}</a>
-    </div>
-    <div class="hero-illustration" aria-hidden="true">
-      <div class="hero-icon-group">
-        <span class="material-symbols-outlined hero-icon hi-car">directions_car</span>
-        <span class="material-symbols-outlined hero-icon hi-people">group</span>
-        <span class="material-symbols-outlined hero-icon hi-leaf">eco</span>
-        <span class="material-symbols-outlined hero-icon hi-route">route</span>
-      </div>
     </div>
   </div>
 </section>
@@ -189,9 +181,9 @@
         <span class="logo-text">Commute</span>
       </div>
       <div class="footer-links">
-        <a href="#">{{ 'footer.privacy' | translate }}</a>
-        <a href="#">{{ 'footer.terms' | translate }}</a>
-        <a href="#">{{ 'footer.contact' | translate }}</a>
+        <a routerLink="/privacy">{{ 'footer.privacy' | translate }}</a>
+        <a routerLink="/terms">{{ 'footer.terms' | translate }}</a>
+        <a routerLink="/contact">{{ 'footer.contact' | translate }}</a>
       </div>
       <p class="footer-copy">{{ 'footer.copy' | translate }}</p>
     </div>

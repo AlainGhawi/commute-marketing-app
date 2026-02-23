@@ -1,0 +1,27 @@
+<app-page-shell>
+  <div class="contact-page">
+    <div class="contact-container">
+      <h1>{{ 'contact.title' | translate }}</h1>
+      <p class="contact-subtitle">{{ 'contact.subtitle' | translate }}</p>
+
+      <div class="contact-grid">
+        @for (card of contactCards; track card.key) {
+          <div class="contact-card">
+            <span class="material-symbols-outlined contact-icon">{{ card.icon }}</span>
+            <h2>{{ card.key + '.heading' | translate }}</h2>
+            <p>{{ card.key + '.text' | translate }}</p>
+            <a class="contact-email" [href]="'mailto:' + (card.emailKey | translate)">
+              {{ card.emailKey | translate }}
+            </a>
+          </div>
+        }
+      </div>
+
+      <div class="contact-office">
+        <span class="material-symbols-outlined contact-icon">location_on</span>
+        <h2>{{ 'contact.office.heading' | translate }}</h2>
+        <p>{{ 'contact.office.text' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</app-page-shell>
