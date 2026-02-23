@@ -1,0 +1,226 @@
+<!-- ============ NAV ============ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" (click)="scrollTo('hero')" aria-label="Commute home">
+      <span class="material-symbols-outlined logo-icon">directions_car</span>
+      <span class="logo-text">Commute</span>
+    </a>
+
+    <div class="nav-links" [class.open]="mobileMenuOpen()">
+      @for (link of navLinks; track link.fragment) {
+        <a class="nav-link" (click)="scrollTo(link.fragment)">{{ link.label }}</a>
+      }
+      <a class="btn btn-primary btn-sm" (click)="scrollTo('cta')">Request a demo</a>
+    </div>
+
+    <button
+      class="mobile-toggle"
+      (click)="toggleMobileMenu()"
+      [attr.aria-expanded]="mobileMenuOpen()"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="material-symbols-outlined">
+        {{ mobileMenuOpen() ? 'close' : 'menu' }}
+      </span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <h1 class="hero-headline">The corporate commute, reimagined.</h1>
+    <p class="hero-subhead">
+      Corporate carpooling + ESG reporting + safer events — in one platform your employees actually want to use.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" (click)="scrollTo('cta')">Request a demo</a>
+      <a class="btn btn-outline btn-lg" (click)="scrollTo('how-it-works')">See how it works</a>
+    </div>
+    <div class="hero-illustration" aria-hidden="true">
+      <div class="hero-icon-group">
+        <span class="material-symbols-outlined hero-icon hi-car">directions_car</span>
+        <span class="material-symbols-outlined hero-icon hi-people">group</span>
+        <span class="material-symbols-outlined hero-icon hi-leaf">eco</span>
+        <span class="material-symbols-outlined hero-icon hi-route">route</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section id="problem" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">The problem</span>
+      <h2>Corporate commuting is broken</h2>
+      <p class="section-subtitle">
+        Companies with physical offices face five costly pain points every single day.
+      </p>
+    </div>
+    <div class="problem-grid">
+      @for (problem of problems; track problem.icon) {
+        <div class="problem-card">
+          <span class="material-symbols-outlined problem-icon">{{ problem.icon }}</span>
+          <h3>{{ problem.title }}</h3>
+          <p>{{ problem.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTION ============ -->
+<section id="solution" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">The solution</span>
+      <h2>Commute solves all five</h2>
+      <p class="section-subtitle">
+        One platform that reduces costs, cuts emissions, and brings your team closer together.
+      </p>
+    </div>
+    <div class="solution-grid">
+      @for (problem of problems; track problem.icon) {
+        <div class="solution-row">
+          <div class="solution-problem">
+            <span class="material-symbols-outlined">{{ problem.icon }}</span>
+            <span class="solution-problem-title">{{ problem.title }}</span>
+          </div>
+          <div class="solution-arrow" aria-hidden="true">
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </div>
+          <div class="solution-answer">
+            <span class="material-symbols-outlined solution-check">check_circle</span>
+            <span>{{ problem.solution }}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">How it works</span>
+      <h2>From sign-up to carpool in minutes</h2>
+    </div>
+    <div class="steps-grid">
+      @for (step of steps; track step.number) {
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">{{ step.number }}</div>
+          <span class="material-symbols-outlined step-icon">{{ step.icon }}</span>
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section id="roadmap" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Roadmap</span>
+      <h2>Phase 1 — MVP Core</h2>
+      <div class="roadmap-badge">WE ARE HERE</div>
+    </div>
+    <div class="roadmap-grid">
+      @for (item of roadmapItems; track item.feature) {
+        <div class="roadmap-card">
+          <div class="roadmap-card-header">
+            <span class="priority-badge" [class.p0]="item.priority === 'P0'" [class.p1]="item.priority === 'P1'">
+              {{ item.priority }}
+            </span>
+            <span class="roadmap-status">Not started</span>
+          </div>
+          <p class="roadmap-feature">{{ item.feature }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECURITY / TRUST ============ -->
+<section id="security" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Trust & Security</span>
+      <h2>Enterprise-ready from day one</h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <span class="material-symbols-outlined trust-icon">shield</span>
+        <h3>Privacy-safe home zones</h3>
+        <p>
+          Employees never share their exact address. Commute uses approximate
+          "home zones" to match rides while protecting personal privacy.
+        </p>
+      </div>
+      <div class="trust-card">
+        <span class="material-symbols-outlined trust-icon">passkey</span>
+        <h3>SSO / OIDC authentication</h3>
+        <p>
+          Integrates with Microsoft Entra ID and other enterprise identity
+          providers. No new passwords for your employees to manage.
+        </p>
+      </div>
+      <div class="trust-card">
+        <span class="material-symbols-outlined trust-icon">apartment</span>
+        <h3>Multi-tenant architecture</h3>
+        <p>
+          Each company's data is fully isolated. Your employee information,
+          ride history, and analytics are never shared across tenants.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / FOOTER ============ -->
+<footer id="cta" class="footer">
+  <div class="container footer-content">
+    <div class="footer-cta">
+      <h2>Ready to reimagine your corporate commute?</h2>
+      <p>Get early access for your company. We'll reach out to schedule a demo.</p>
+      <form class="email-form" (ngSubmit)="submitEmail()">
+        <input
+          type="email"
+          name="email"
+          class="email-input"
+          placeholder="you&#64;company.com"
+          required
+          [ngModel]="email()"
+          (ngModelChange)="email.set($event)"
+          aria-label="Work email address"
+        />
+        <button type="submit" class="btn btn-primary btn-lg">Request a demo</button>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-brand">
+        <span class="material-symbols-outlined logo-icon">directions_car</span>
+        <span class="logo-text">Commute</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Commute. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SNACKBAR ============ -->
+@if (snackbarVisible()) {
+  <div class="snackbar" role="status" aria-live="polite">
+    <span class="material-symbols-outlined">check_circle</span>
+    Thanks! We'll reach out soon.
+  </div>
+}
