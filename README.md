@@ -1,8 +1,8 @@
 # 🚗 Commute — Corporate Carpooling Platform
 
-> *The corporate commute, reimagined.*
+> *The employee commute, reimagined.*
 
-Commute is a B2B corporate carpooling platform that enables employees from the same company to share rides to and from work. The company is the customer; employees are the users.
+Commute is an employee carpooling platform that enables employees from the same company to share rides to and from work.
 
 ---
 

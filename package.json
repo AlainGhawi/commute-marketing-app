@@ -1,5 +1,5 @@
 {
-  "name": "commute-app",
+  "name": "commute-marketing-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:commute-app": "node dist/commute-app/server/server.mjs"
+    "serve:ssr:commute-marketing-app": "node dist/commute-marketing-app/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
