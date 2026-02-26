@@ -29,13 +29,13 @@ jobs:
       - run: npx ng build --base-href /${{ github.event.repository.name }}/
 
       - name: Create 404 fallback for GitHub Pages
-        run: cp dist/commute-app/browser/index.html dist/commute-app/browser/404.html
+        run: cp dist/commute-marketing-app/browser/index.html dist/commute-marketing-app/browser/404.html
 
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/commute-app/browser
+          path: dist/commute-marketing-app/browser
 
   deploy:
     needs: build

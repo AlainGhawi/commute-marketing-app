@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "commute-app:build:production"
+              "buildTarget": "commute-marketing-app:build:production"
             },
             "development": {
-              "buildTarget": "commute-app:build:development"
+              "buildTarget": "commute-marketing-app:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,7 +1,7 @@
 export const APP = {
   name: 'Commute',
   tagline: 'Corporate Carpooling Platform',
-  baseUrl: 'https://alainghawi.github.io/commute-app/',
+  baseUrl: 'https://alainghawi.github.io/commute-marketing-app/',
   copyrightYear: 2026,
   lastUpdated: 'February 2026',
   lastUpdatedFr: 'f\u00e9vrier 2026',

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://alainghawi.github.io/commute-app/</loc>
+    <loc>https://alainghawi.github.io/commute-marketing-app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://alainghawi.github.io/commute-app/contact</loc>
+    <loc>https://alainghawi.github.io/commute-marketing-app/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://alainghawi.github.io/commute-app/privacy</loc>
+    <loc>https://alainghawi.github.io/commute-marketing-app/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://alainghawi.github.io/commute-app/terms</loc>
+    <loc>https://alainghawi.github.io/commute-marketing-app/terms</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
