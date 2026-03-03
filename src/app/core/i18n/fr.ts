@@ -7,11 +7,11 @@ export const fr: Record<string, string> = {
   'nav.howItWorks': 'Comment \u00e7a marche',
   'nav.roadmap': 'Feuille de route',
   'nav.security': 'S\u00e9curit\u00e9',
-  'nav.requestDemo': 'Demander une d\u00e9mo',
+  'nav.getStarted': 'Commencer',
 
   // Hero
   'hero.headline': 'Le trajet des employ\u00e9s, r\u00e9invent\u00e9.',
-  'hero.ctaPrimary': 'Demander une d\u00e9mo',
+  'hero.ctaPrimary': 'Commencer',
   'hero.ctaSecondary': 'Voir comment \u00e7a marche',
 
   // Problem
@@ -80,16 +80,18 @@ export const fr: Record<string, string> = {
 
   // Footer
   'footer.heading': 'Pr\u00eat \u00e0 r\u00e9inventer le trajet de vos employ\u00e9s\u00a0?',
-  'footer.subtitle':
-    'Obtenez un acc\u00e8s anticip\u00e9 pour votre entreprise. Nous vous contacterons pour planifier une d\u00e9mo.',
-  'footer.placeholder': 'vous@entreprise.com',
+  'footer.subtitle': 'Commencez d\u00e8s aujourd\u2019hui \u2014 que vous configuriez pour votre entreprise ou que vous rejoigniez en tant qu\u2019employ\u00e9.',
   'footer.privacy': 'Confidentialit\u00e9',
   'footer.terms': 'Conditions',
   'footer.contact': 'Contact',
   'footer.copy': `\u00a9 ${APP.copyrightYear} ${APP.name}. Tous droits r\u00e9serv\u00e9s.`,
 
-  // Snackbar
-  'snackbar.success': 'Merci\u00a0! Nous vous contacterons bient\u00f4t.',
+  // Get Started modal
+  'getStarted.title': 'Comment souhaitez-vous commencer\u00a0?',
+  'getStarted.employer': 'Employeur',
+  'getStarted.employerDesc': 'Mettez en place le covoiturage pour votre entreprise',
+  'getStarted.employee': 'Employ\u00e9',
+  'getStarted.employeeDesc': 'Rejoignez le programme de covoiturage de votre entreprise',
 
   // Page shell
   'pageShell.backToHome': 'Retour \u00e0 l\u2019accueil',

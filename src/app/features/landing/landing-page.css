@@ -531,33 +531,8 @@
   font-size: 1.0625rem;
 }
 
-.email-form {
-  display: flex;
-  gap: var(--space-3);
-  justify-content: center;
+.footer-cta-btn {
   margin-top: var(--space-6);
-  flex-wrap: wrap;
-}
-
-.email-input {
-  font-family: inherit;
-  font-size: 1rem;
-  padding: var(--space-3) var(--space-4);
-  border: 2px solid var(--color-gray-700);
-  border-radius: var(--radius-lg);
-  background: var(--color-gray-800);
-  color: #fff;
-  min-width: 280px;
-  outline: none;
-  transition: border-color 0.15s ease;
-}
-
-.email-input::placeholder {
-  color: var(--color-gray-500);
-}
-
-.email-input:focus {
-  border-color: var(--color-primary);
 }
 
 .footer-bottom {
@@ -602,38 +577,115 @@
   color: var(--color-gray-500);
 }
 
-/* ---- Snackbar ---- */
+/* ---- Get Started Modal ---- */
 
-.snackbar {
+.modal-backdrop {
   position: fixed;
-  bottom: var(--space-8);
-  left: 50%;
-  transform: translateX(-50%);
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-6);
-  background: var(--color-gray-900);
-  color: #fff;
-  font-weight: 500;
-  border-radius: var(--radius-lg);
+  justify-content: center;
+  padding: var(--space-6);
+  animation: modal-fade-in 0.2s ease;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-8) var(--space-6);
+  max-width: 600px;
+  width: 100%;
   box-shadow: var(--shadow-lg);
-  z-index: 200;
-  animation: snackbar-in 0.3s ease;
+  animation: modal-slide-in 0.25s ease;
 }
 
-.snackbar .material-symbols-outlined {
-  color: var(--color-primary-light);
+.modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background: none;
+  border: none;
+  color: var(--color-gray-400);
+  cursor: pointer;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease;
 }
 
-@keyframes snackbar-in {
+.modal-close:hover {
+  color: var(--color-gray-700);
+}
+
+.modal-title {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: var(--color-gray-900);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.role-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.role-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: var(--space-8) var(--space-4);
+  border: 2px solid var(--color-gray-200);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.role-icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.role-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.role-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-slide-in {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(1rem);
+    transform: translateY(1rem);
   }
   to {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -714,14 +766,11 @@
     text-align: center;
   }
 
-  .email-input {
-    min-width: 0;
-    width: 100%;
+  .role-cards {
+    grid-template-columns: 1fr;
   }
 
-  .email-form {
-    flex-direction: column;
-    align-items: stretch;
-    padding-inline: var(--space-4);
+  .modal-content {
+    padding: var(--space-6) var(--space-4) var(--space-4);
   }
 }

@@ -1,12 +1,11 @@
 import { Component, signal, inject, ChangeDetectionStrategy } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../core/i18n/translation.service';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-landing-page',
-  imports: [FormsModule, RouterLink, TranslatePipe],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -15,8 +14,7 @@ export class LandingPage {
   protected readonly i18n = inject(TranslationService);
 
   protected readonly mobileMenuOpen = signal(false);
-  protected readonly email = signal('');
-  protected readonly snackbarVisible = signal(false);
+  protected readonly getStartedOpen = signal(false);
 
   protected readonly navLinks = [
     { key: 'nav.problem', fragment: 'problem' },
@@ -54,10 +52,12 @@ export class LandingPage {
     document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });
   }
 
-  protected submitEmail(): void {
-    if (!this.email()) return;
-    this.snackbarVisible.set(true);
-    this.email.set('');
-    setTimeout(() => this.snackbarVisible.set(false), 4000);
+  protected openGetStarted(): void {
+    this.mobileMenuOpen.set(false);
+    this.getStartedOpen.set(true);
+  }
+
+  protected closeGetStarted(): void {
+    this.getStartedOpen.set(false);
   }
 }

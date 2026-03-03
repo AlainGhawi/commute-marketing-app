@@ -7,11 +7,11 @@ export const en: Record<string, string> = {
   'nav.howItWorks': 'How it works',
   'nav.roadmap': 'Roadmap',
   'nav.security': 'Security',
-  'nav.requestDemo': 'Request a demo',
+  'nav.getStarted': 'Get started',
 
   // Hero
   'hero.headline': 'The employee commute, reimagined.',
-  'hero.ctaPrimary': 'Request a demo',
+  'hero.ctaPrimary': 'Get started',
   'hero.ctaSecondary': 'See how it works',
 
   // Problem
@@ -80,16 +80,18 @@ export const en: Record<string, string> = {
 
   // Footer
   'footer.heading': 'Ready to reimagine your corporate commute?',
-  'footer.subtitle':
-    'Get early access for your company. We\'ll reach out to schedule a demo.',
-  'footer.placeholder': 'you@company.com',
+  'footer.subtitle': 'Get started today — whether you\'re setting up for your company or joining as an employee.',
   'footer.privacy': 'Privacy',
   'footer.terms': 'Terms',
   'footer.contact': 'Contact',
   'footer.copy': `\u00a9 ${APP.copyrightYear} ${APP.name}. All rights reserved.`,
 
-  // Snackbar
-  'snackbar.success': 'Thanks! We\'ll reach out soon.',
+  // Get Started modal
+  'getStarted.title': 'How would you like to get started?',
+  'getStarted.employer': 'Employer',
+  'getStarted.employerDesc': 'Set up carpooling for your company',
+  'getStarted.employee': 'Employee',
+  'getStarted.employeeDesc': 'Join your company\'s carpool program',
 
   // Page shell
   'pageShell.backToHome': 'Back to Home',

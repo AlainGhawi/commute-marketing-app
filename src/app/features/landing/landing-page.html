@@ -10,7 +10,7 @@
       @for (link of navLinks; track link.fragment) {
         <a class="nav-link" (click)="scrollTo(link.fragment)">{{ link.key | translate }}</a>
       }
-      <a class="btn btn-primary btn-sm" (click)="scrollTo('cta')">{{ 'nav.requestDemo' | translate }}</a>
+      <a class="btn btn-primary btn-sm" (click)="openGetStarted()">{{ 'nav.getStarted' | translate }}</a>
     </div>
 
     <div class="nav-right">
@@ -37,7 +37,7 @@
   <div class="container hero-content">
     <h1 class="hero-headline">{{ 'hero.headline' | translate }}</h1>
     <div class="hero-actions">
-      <a class="btn btn-primary btn-lg" (click)="scrollTo('cta')">{{ 'hero.ctaPrimary' | translate }}</a>
+      <a class="btn btn-primary btn-lg" (click)="openGetStarted()">{{ 'hero.ctaPrimary' | translate }}</a>
       <a class="btn btn-outline btn-lg" (click)="scrollTo('how-it-works')">{{ 'hero.ctaSecondary' | translate }}</a>
     </div>
   </div>
@@ -136,19 +136,7 @@
     <div class="footer-cta">
       <h2>{{ 'footer.heading' | translate }}</h2>
       <p>{{ 'footer.subtitle' | translate }}</p>
-      <form class="email-form" (ngSubmit)="submitEmail()">
-        <input
-          type="email"
-          name="email"
-          class="email-input"
-          [placeholder]="'footer.placeholder' | translate"
-          required
-          [ngModel]="email()"
-          (ngModelChange)="email.set($event)"
-          aria-label="Work email address"
-        />
-        <button type="submit" class="btn btn-primary btn-lg">{{ 'nav.requestDemo' | translate }}</button>
-      </form>
+      <a class="btn btn-primary btn-lg footer-cta-btn" (click)="openGetStarted()">{{ 'nav.getStarted' | translate }}</a>
     </div>
 
     <div class="footer-bottom">
@@ -166,10 +154,36 @@
   </div>
 </footer>
 
-<!-- ============ SNACKBAR ============ -->
-@if (snackbarVisible()) {
-  <div class="snackbar" role="status" aria-live="polite">
-    <span class="material-symbols-outlined">check_circle</span>
-    {{ 'snackbar.success' | translate }}
+<!-- ============ GET STARTED MODAL ============ -->
+@if (getStartedOpen()) {
+  <div class="modal-backdrop" (click)="closeGetStarted()">
+    <div class="modal-content" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="closeGetStarted()" aria-label="Close">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <h2 class="modal-title">{{ 'getStarted.title' | translate }}</h2>
+      <div class="role-cards">
+        <a
+          class="role-card"
+          href="https://alainghawi.github.io/commute-admin/login"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="material-symbols-outlined role-icon">business</span>
+          <h3>{{ 'getStarted.employer' | translate }}</h3>
+          <p>{{ 'getStarted.employerDesc' | translate }}</p>
+        </a>
+        <a
+          class="role-card"
+          href="https://alainghawi.github.io/commute-app/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="material-symbols-outlined role-icon">person</span>
+          <h3>{{ 'getStarted.employee' | translate }}</h3>
+          <p>{{ 'getStarted.employeeDesc' | translate }}</p>
+        </a>
+      </div>
+    </div>
   </div>
 }
