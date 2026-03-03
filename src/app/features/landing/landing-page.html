@@ -111,32 +111,8 @@
   </div>
 </section>
 
-<!-- ============ ROADMAP ============ -->
-<section id="roadmap" class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">{{ 'roadmap.label' | translate }}</span>
-      <h2>{{ 'roadmap.heading' | translate }}</h2>
-      <div class="roadmap-badge">{{ 'roadmap.badge' | translate }}</div>
-    </div>
-    <div class="roadmap-grid">
-      @for (item of roadmapItems; track item.key) {
-        <div class="roadmap-card">
-          <div class="roadmap-card-header">
-            <span class="priority-badge" [class.p0]="item.priority === 'P0'" [class.p1]="item.priority === 'P1'">
-              {{ item.priority }}
-            </span>
-            <span class="roadmap-status">{{ 'roadmap.status' | translate }}</span>
-          </div>
-          <p class="roadmap-feature">{{ item.key | translate }}</p>
-        </div>
-      }
-    </div>
-  </div>
-</section>
-
 <!-- ============ SECURITY / TRUST ============ -->
-<section id="security" class="section section-alt">
+<section id="security" class="section">
   <div class="container">
     <div class="section-header">
       <span class="section-label">{{ 'trust.label' | translate }}</span>

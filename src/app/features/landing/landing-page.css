@@ -439,40 +439,6 @@
   line-height: 1.5;
 }
 
-/* ---- Roadmap ---- */
-
-.roadmap-badge {
-  display: inline-block;
-  margin-top: var(--space-3);
-  padding: var(--space-1) var(--space-4);
-  background: var(--color-primary);
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  border-radius: var(--radius-full);
-}
-
-.roadmap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: var(--space-4);
-}
-
-.roadmap-card {
-  background: var(--color-surface-elevated);
-  border: 1px solid var(--color-gray-200);
-  border-radius: var(--radius-md);
-  padding: var(--space-4) var(--space-5);
-}
-
-.roadmap-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-2);
-}
-
 .priority-badge {
   font-size: 0.6875rem;
   font-weight: 700;

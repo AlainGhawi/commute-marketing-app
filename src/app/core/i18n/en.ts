@@ -65,22 +65,6 @@ export const en: Record<string, string> = {
   'steps.4.description':
     'Confirm your ride the evening before. Get a notification when your driver is on the way.',
 
-  // Roadmap
-  'roadmap.label': 'Roadmap',
-  'roadmap.heading': 'Phase 1 \u2014 MVP Core',
-  'roadmap.badge': 'WE ARE HERE',
-  'roadmap.status': 'Not started',
-  'roadmap.0': 'Employee onboarding & profile setup',
-  'roadmap.1': 'Home zone selection (privacy-safe)',
-  'roadmap.2': 'Commute preferences (days, times, role)',
-  'roadmap.3': 'Next-day batch ride matching',
-  'roadmap.4': 'Ride confirmation / cancellation',
-  'roadmap.5': 'Real-time notifications',
-  'roadmap.6': 'PWA with push notifications',
-  'roadmap.7': 'SSO / OIDC authentication',
-  'roadmap.8': 'Company admin dashboard',
-  'roadmap.9': 'Ride history & stats',
-
   // Trust
   'trust.label': 'Trust & Security',
   'trust.heading': 'Enterprise-ready from day one',

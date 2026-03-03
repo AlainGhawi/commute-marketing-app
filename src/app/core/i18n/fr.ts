@@ -65,22 +65,6 @@ export const fr: Record<string, string> = {
   'steps.4.description':
     'Confirmez votre trajet la veille au soir. Recevez une notification quand votre conducteur est en route.',
 
-  // Roadmap
-  'roadmap.label': 'Feuille de route',
-  'roadmap.heading': 'Phase 1 \u2014 MVP',
-  'roadmap.badge': 'NOUS SOMMES ICI',
-  'roadmap.status': 'Non commenc\u00e9',
-  'roadmap.0': 'Inscription et configuration de profil',
-  'roadmap.1': 'S\u00e9lection de zone d\u2019habitation (respect de la vie priv\u00e9e)',
-  'roadmap.2': 'Pr\u00e9f\u00e9rences de trajet (jours, horaires, r\u00f4le)',
-  'roadmap.3': 'Jumelage de trajets quotidien',
-  'roadmap.4': 'Confirmation / annulation de trajet',
-  'roadmap.5': 'Notifications en temps r\u00e9el',
-  'roadmap.6': 'PWA avec notifications push',
-  'roadmap.7': 'Authentification SSO / OIDC',
-  'roadmap.8': 'Tableau de bord administrateur',
-  'roadmap.9': 'Historique et statistiques de trajets',
-
   // Trust
   'trust.label': 'Confiance & S\u00e9curit\u00e9',
   'trust.heading': 'Pr\u00eat pour l\u2019entreprise d\u00e8s le premier jour',
